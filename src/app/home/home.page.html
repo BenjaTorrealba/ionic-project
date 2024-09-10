@@ -1,20 +1,69 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-menu contentId="main-content">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+
+    <ion-searchbar></ion-searchbar>
+    <h2>Categorias</h2>
+    <div class="category-buttons">
+      <ion-button color="primary" expand="block">Tecnología</ion-button>
+      <ion-button color="secondary" expand="block">Deportes</ion-button>
+      <ion-button color="tertiary" expand="block">Política</ion-button>
+      <ion-button color="success" expand="block">Economía</ion-button>
+      <ion-button color="warning" expand="block">Salud</ion-button>
+      <ion-button color="danger" expand="block">Entretenimiento</ion-button>
+    </div>
+  
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>BenjaNews</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="presentAlert()"><ion-icon name="person-circle-outline"></ion-icon></ion-button>
+      
+          
+  
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+  <ion-content class="ion-padding">
+    <div class="welcome-box animated fadeInDown">
+      <h1>Bienvenido a <strong>BenjaNews</strong>, {{username}}!</h1>
+      <p>Las mejores noticias en un solo lugar.</p>
+
+
+    </div>
+    <ion-card>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title>Titulo Noticia</ion-card-title>
+        <ion-card-subtitle>Categoria</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Here's a small text description for the card content. Nothing more, nothing less.
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title>Titulo Noticia</ion-card-title>
+        <ion-card-subtitle>Categoria</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Here's a small text description for the card content. Nothing more, nothing less.
+      </ion-card-content>
+    </ion-card>
+
+  </ion-content>
+</div>

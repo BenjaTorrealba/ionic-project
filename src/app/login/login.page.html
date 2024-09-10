@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>BenjaNews Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="login-content">
+  <div class="login-box animated fadeIn">
+
+    <form (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label position="floating">Nombre de Usuario</ion-label>
+        <ion-icon slot="start" name="person-outline"></ion-icon>
+        <ion-input [(ngModel)]="username" name="username" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+        <ion-input [(ngModel)]="password" name="password" type="password" required></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" type="submit" class="animated bounceIn">Ingresar</ion-button>
+
+      <ion-button expand="block" fill="clear" color="secondary" (click)="resetPassword()">
+        Restablecer Contraseña
+      </ion-button>
+    </form>
+  </div>
+</ion-content>
